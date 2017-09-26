@@ -63,7 +63,7 @@ This will listion the endpoint in 8000 port,
 
 You must see employee JSONs
 
-## Integarating Cidaas Interceptor
+## Integrating Cidaas Interceptor
 
 Cidaas interceptor is published in packagist (https://packagist.org/packages/cidaas/cidaas-interceptor) .
 
