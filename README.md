@@ -10,7 +10,7 @@ Composer
 
 PHP > 5.3 
 
-## Getting started in Laravel 
+## Getting started with Laravel 
 
 Please visit the following links to get familar in `Laravel`
 
