@@ -1,6 +1,6 @@
 # How to use it
 
-In this example I am going to use `Laravel` https://laravel.com/ framework for my api project
+In this example we are going to use `Laravel` https://laravel.com/ framework for my api project
 
 ## Pre-Request for the Demo
 
@@ -21,7 +21,7 @@ https://laravel.com/docs/5.5
 
 https://github.com/Cidaas/rest-api-without-secure
 
-In this project I have some sample rest services to show the employee details.
+In this project we have sample rest services to show the employee details.
 
 
 ### Accessing the Rest Api (Without secure)
@@ -169,8 +169,27 @@ Route::get('/holidaylist',[
     "uses"=>"RestController@HolidayList"])->middleware('cidaas');
 ```
 
-
 Now the Rest services fully secured with Cidaas Interceptors
+
+### To Generate Access Token
+
+Use our OAuth2 Client Library to get access token from Cidaas
+
+https://github.com/Cidaas/oauth2-cidaas-php
+
+### Access the secured rest API with access token
+
+Cidaas interceptor expecting the client to pass the access token in all the requests, in the `header` or `query string` with the key of `access_token` or in the `authorization header` with `bearer token` 
+
+Sample Request 
+
+
+```php
+curl -X GET \
+  http://localhost:8000/ \
+  -H 'access_token: eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJkYjM4NDUyYS00ODA4LTQ4NGItODZhOS1lYjk0MDcxYmM4OTMiLCJhdWQiOiJlNWYzNjAxZWZmMDY0ZTllYmIxYjViY2QxYWRlMDAyNyIsImNsaWVudGlkIjoiZTVmMzYwMWVmZjA2NGU5ZWJiMWI1YmNkMWFkZTAwMjciLCJyb2xlIjoiSFIsVVNFUiIsImF1dGhfdGltZSI6MTUwNjM2ODcwODk2OSwic2NvcGUiOiJjaWRhYXM6dXNlcmluZm8gYWRkcmVzcyBwaG9uZSBwcm9maWxlIGNpZGFhczpsb2dpbiBjaWRhYXM6cmVnaXN0ZXIgY2lkYWFzOnVzZXJ1cGRhdGUgZW1haWwiLCJpc3MiOiJodHRwczovL2RlbW8uY2lkYWFzLmRlIiwiZXhwIjoxNTA2NDU1MTA4MDAwLCJpYXQiOjE1MDYzNjg3MDgsImp0aSI6IjU0ZWVmZDY0LTJlMzgtNDY1OS1iODY4LTAyNTk0YTc1MzhhMSIsImV4cF9pbiI6ODY0MDB9.l6dTmkpRjyBe6azSpwHM32q-ZUKr5_yrx53uxZ1PE0w'
+```
+
 
 
 
