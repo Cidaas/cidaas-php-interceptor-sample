@@ -19,7 +19,7 @@ https://laravel.com/docs/5.5
 
 ### Download the sample project 
 
-https://github.com/Cidaas/rest-api-without-secure
+https://github.com/Cidaas/cidaas-php-interceptor-sample
 
 In this project we have sample rest services to show the employee details.
 
